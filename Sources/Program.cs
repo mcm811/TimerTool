@@ -8,6 +8,7 @@
  */
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace TimerTool
 {
@@ -22,10 +23,10 @@ namespace TimerTool
 		[STAThread]
 		private static void Main(string[] args)
 		{
-			Application.EnableVisualStyles();
+            WinApiCalls.SetTimerResolution(5000);
+            Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm());
-		}
-		
+		}		
 	}
 }
